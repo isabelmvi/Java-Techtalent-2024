@@ -14,15 +14,15 @@ public class T05ej1 {
 		
 	if (Variable1>Variable2){
 //		System.out.println("a es mayor que b");
-		String result; JOptionPane.showMessageDialog(null, "a es mayor que b");
+		JOptionPane.showMessageDialog(null, "a es mayor que b");
 	}
 	else if (Variable1<Variable2){
 //		System.out.println("b es mayor que a");
-		String result; JOptionPane.showMessageDialog(null, "b es mayor que a");
+		JOptionPane.showMessageDialog(null, "b es mayor que a");
 	}
 	else {
 //		System.out.println("a es igual a b");
-		String result; JOptionPane.showMessageDialog(null, "a es igual a b");
+		JOptionPane.showMessageDialog(null, "a es igual a b");
 	}
 	}
 
