@@ -4,24 +4,20 @@ public class T05ej12 {
 
 	public static void main(String[] args) {
 
-		 String texto_num = JOptionPane.showInputDialog(null, "Introduce la contraseña:");
 		 String pass = "12345";
-		 int cont = 1;
+		 int cont = 0;
 		
-		 
-	int validacion=Integer.parseInt(texto_num);	
-	
-	while ((!texto_num.equals(pass)) && (cont<3)){
-		cont++;
+	while (cont<3){
+		 String texto_num = JOptionPane.showInputDialog(null, "Introduce la contraseña:");
 		if (texto_num.equals(pass)){
-			JOptionPane.showMessageDialog(null, "Contraseña válida");
-			cont =10;
+			JOptionPane.showMessageDialog(null, "Contraseña válida!");
+			break;
 		} else {JOptionPane.showMessageDialog(null, "No es una contraseña válida.");
-		texto_num = JOptionPane.showInputDialog(null, "Introduce la contraseña:");
+			cont++;
 	}
-		
-		
-		
-	}
+}
+			if(cont>=3){
+			JOptionPane.showMessageDialog(null, "Se acabaron los intentos:(");
+		}
 }
 }	
