@@ -4,7 +4,7 @@ public class T05ejExtra3 {
 	public static void main(String[] args) {
 		
 			Scanner scanner = new Scanner(System.in);
-			System.out.print("Introdu un número: ");
+			System.out.print("Introduce un número: ");
 				int numero = scanner.nextInt();
 				scanner.close();
 				
