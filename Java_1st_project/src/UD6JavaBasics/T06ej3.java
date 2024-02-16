@@ -7,20 +7,15 @@ public class T06ej3 {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Introduce un número: ");
 		int numero=scanner.nextInt();
-		scanner.close();
-		
-		if (primo(numero)) {
-			System.out.println("El número "+numero+" es primo.");
-		} else {
-			System.out.println("El número "+numero+" no es primo.");
-			}
+		boolean esPrimo=esPrimo(numero);
+		System.out.println("El número "+numero+" es "+(esPrimo?"primo":"no es primo."));
 		}
 		
-		public static boolean primo(int num) {
+		public static boolean esPrimo(int num) {
 			if (num<=1) {
 				return false;
 				}
-			for (int i=2; i<num; i++) {
+			for (int i=2; i<=Math.sqrt(num); i++) {
 				if (num % i==0){
 					return false;
 				}
