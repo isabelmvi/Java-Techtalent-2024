@@ -28,7 +28,7 @@ public class T07ej1 {
 	public static double sumarNotas(double suma, double nota) {
 		return suma+=nota;
 	}
-	
+ 
 		
 	//	Scanner scanner=new Scanner(System.in);
 		

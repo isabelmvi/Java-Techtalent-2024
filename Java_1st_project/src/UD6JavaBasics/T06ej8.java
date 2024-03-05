@@ -11,7 +11,8 @@ public class T06ej8 {
 	public static void llenarValores(int[] array) {
 		Scanner scanner=new Scanner(System.in);
 		for (int i=0; i<array.length; i++) {
-			System.out.println("Introduce el valor para la posición "+i+": ");
+			System.out.println("Introduce el valor"
+					+ " para la posición "+i+": ");
 			array[i]=scanner.nextInt();
 		}	
 	}

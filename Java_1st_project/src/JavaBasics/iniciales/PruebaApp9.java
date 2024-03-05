@@ -1,4 +1,4 @@
-package src;
+package JavaBasics.iniciales;
 
 public class PruebaApp9 {
 

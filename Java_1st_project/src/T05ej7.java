@@ -7,7 +7,7 @@ public class T05ej7 {
 			System.out.println(num);
 			num++;
 		}
-	}
+	}	
 
 }
 

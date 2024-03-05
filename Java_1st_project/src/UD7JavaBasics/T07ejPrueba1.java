@@ -1,6 +1,8 @@
 package UD7JavaBasics;
-import java.util.HashMap;
+
+import java.util.*;
 import java.util.Scanner;
+
 public class T07ejPrueba1 {
 
 	public static void main(String[] args) {

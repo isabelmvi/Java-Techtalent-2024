@@ -1,4 +1,4 @@
-
+package JavaBasics.UD4JavaBasics;
 public class T04ej2 {
 
 	public static void main(String[] args) {
@@ -20,7 +20,6 @@ public class T04ej2 {
 		System.out.println(+N+ " + " +A+ " = " + suma);
 		System.out.println(+N+ " - " +A+ " = " + resta);
 		System.out.println("Valor numérico del carácter a = " +a);
-		
 	}
 
 }
