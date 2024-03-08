@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class T07ej2 {
 
     public static void main(String[] args) {
-       /* Scanner scanner = new Scanner(System.in);
+      Scanner scanner = new Scanner(System.in);
 
         System.out.println("Introduce la cantidad de artículos comprados: ");
         int cantidadProductos = scanner.nextInt();
@@ -28,13 +28,14 @@ public class T07ej2 {
         int tipoIVA = scanner.nextInt();
 
         double iva = tipoIVA == 21 ? 0.21 : 0.04;
-
+        double precioTotal = 0;
+        
         System.out.println("Resumen de compras: ");
         DecimalFormat formato = new DecimalFormat("#,##.##");
         for (String producto : productos.keySet()) {
             double precioProd = productos.get(producto);
             double ivaProducto = precioProd * iva;
-            double precioTotal = precioProd + ivaProducto;
+            precioTotal += (precioProd + ivaProducto);
             System.out.println(producto + ": Precio Total: " + formato.format(precioTotal) +
                     " - IVA: " + formato.format(ivaProducto) + "€");
         }
@@ -42,14 +43,14 @@ public class T07ej2 {
         System.out.println("IVA aplicado: " + (iva * 100) + "%");
         System.out.println("Número de artículos comprados: " + cantidadProductos);
         System.out.println("Precio total bruto: " + formato.format(totalProductos) + "€");
-        System.out.println("Precio total neto: "+formato.format(totalProductos+iva));
+        System.out.println("Precio total neto: "+formato.format(precioTotal));
 
         System.out.println("Introduce la cantidad pagada: ");
         double cantidadPagada = scanner.nextDouble();
-        double cambio = cantidadPagada - totalProductos-iva;
+        double cambio = cantidadPagada - precioTotal;
         System.out.println("Cambio a devolver al cliente: " + formato.format(cambio) + "€");
 
         scanner.close();
-     */
+    
     }
 }
