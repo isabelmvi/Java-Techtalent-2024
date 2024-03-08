@@ -18,18 +18,18 @@ public class T07ej2 {
             double precioProd = scanner.nextDouble();
             
             System.out.println("¿Es este producto de primera necesidad? (Sí/No): ");
-            String respuesta = scanner.next().toLowerCase(); // Convertir a minúsculas para facilitar la comparación
+            String respuesta = scanner.next().toLowerCase(); 
             
             
             if (respuesta.equals("sí") || respuesta.equals("si")) {
-                iva = 0.04; // 4% de IVA para productos de primera necesidad
+                iva = 0.04; 
             } else {
-                iva = 0.21; // 21% de IVA para productos que no son de primera necesidad
+                iva = 0.21; 
             }
 
-            productos.put("producto" + i, precioProd * (1 + iva)); // Agregar el precio con el IVA incluido al mapa
+            productos.put("producto" + i, precioProd * (1 + iva)); 
             
-            totalProductos += precioProd; // Sumar al total de productos
+            totalProductos += precioProd; 
         }
 
         System.out.println("Resumen de compras: ");
@@ -37,8 +37,8 @@ public class T07ej2 {
         double precioTotal = 0;
         for (String producto : productos.keySet()) {
             double precioProd = productos.get(producto);
-            double ivaProducto = precioProd - (precioProd / (1 + iva)); // Calcular el IVA del producto
-            precioTotal += precioProd; // Sumar al precio total
+            double ivaProducto = precioProd - (precioProd / (1 + iva));
+            precioTotal += precioProd;
             System.out.println(producto + ": Precio Total: " + formato.format(precioProd) +
                     " - IVA: " + formato.format(ivaProducto) + "€");
         }
