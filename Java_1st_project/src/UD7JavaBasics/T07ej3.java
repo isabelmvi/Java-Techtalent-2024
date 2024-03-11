@@ -18,7 +18,7 @@ public class T07ej3 {
     }
 
     public static void pedirNombre(Map<String, Double> productos) {
-        int num = 3;
+        int num = 10;
         for (int i = 0; i < num; i++) {
             String articulo = JOptionPane.showInputDialog(null, "Introduce el artículo " + (i + 1));
             double precio = Double.parseDouble(JOptionPane.showInputDialog(null,
