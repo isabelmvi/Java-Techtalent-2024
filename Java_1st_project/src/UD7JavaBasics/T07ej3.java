@@ -43,7 +43,8 @@ public class T07ej3 {
     }
 
     public static void consultaPrecio(Map<String, Double> productos) {
-        String consulta = JOptionPane.showInputDialog("Introduce el nombre del artículo para consultar su precio: ");
+        String consulta = JOptionPane.showInputDialog("Introduce el nombre del "
+        		+ "artículo para consultar su precio: ");
         if (productos.containsKey(consulta)) {
             JOptionPane.showMessageDialog(null, "El precio de " + consulta + " es €" + productos.get(consulta));
         } else {
