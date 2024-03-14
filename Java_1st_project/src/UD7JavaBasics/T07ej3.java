@@ -18,8 +18,8 @@ public class T07ej3 {
     }
 
     public static void pedirNombre(Map<String, Double> productos) {
-        int num = 10;
-        for (int i = 0; i < num; i++) {
+        String cantidadProd=JOptionPane.showInputDialog(null, "Introduce la cantidad de artículos comprados: ");
+        for (int i = 0; i < Double.parseDouble(cantidadProd); i++) {
             String articulo = JOptionPane.showInputDialog(null, "Introduce el artículo " + (i + 1));
             double precio = Double.parseDouble(JOptionPane.showInputDialog(null,
                     "Introduce el precio de " + articulo, "Precio", JOptionPane.PLAIN_MESSAGE));
@@ -54,7 +54,7 @@ public class T07ej3 {
 
     public static void info(Map<String, Double> productos) {
     	StringBuilder lista=new StringBuilder();
-        JOptionPane.showMessageDialog(null, "\nInformación almacenada:");
+        JOptionPane.showMessageDialog(null, "\nLista de la compra:");
         for (Map.Entry<String, Double> entry : productos.entrySet()) {
         	lista.append(entry.getKey() + ": €" + entry.getValue()+"\n");
         }
