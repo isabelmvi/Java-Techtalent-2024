@@ -130,13 +130,13 @@ public class T07ej4punto2 {
 		        botones.setLayout(new GridLayout(0, 4));
 		        botones.setBackground(Color.GRAY);
 
-		        JButton anadir = new JButton(escalarImagen("Iconos\\cart-plus.png"));
+		        JButton anadir = new JButton(escalarImagen("C:\\Users\\iovil\\Desktop\\Repositorios\\Java-Techtalent-2024\\Java_1st_project\\src\\UD7JavaBasics\\Iconos\\cart-plus.png"));
 		        modificarBoton(anadir);
-		        JButton comprar = new JButton(escalarImagen("Iconos\\cart-check.png"));
+		        JButton comprar = new JButton(escalarImagen("C:\\Users\\iovil\\Desktop\\Repositorios\\Java-Techtalent-2024\\Java_1st_project\\src\\UD7JavaBasics\\Iconos\\cart-check.png"));
 		        modificarBoton(comprar);
-		        JButton lista = new JButton(escalarImagen("Iconos\\list-task.png"));
+		        JButton lista = new JButton(escalarImagen("C:\\Users\\iovil\\Desktop\\Repositorios\\Java-Techtalent-2024\\Java_1st_project\\src\\UD7JavaBasics\\Iconos\\list-task.png"));
 		        modificarBoton(lista);
-		        JButton lupa = new JButton(escalarImagen("Iconos\\search.png"));
+		        JButton lupa = new JButton(escalarImagen("C:\\Users\\iovil\\Desktop\\Repositorios\\Java-Techtalent-2024\\Java_1st_project\\src\\UD7JavaBasics\\Iconos\\search.png"));
 		        modificarBoton(lupa);
 
 		        accionesAnadir(frame, anadir, productos, productosTXT, productoStock, productoPrecio);

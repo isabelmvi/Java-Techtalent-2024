@@ -18,9 +18,11 @@ public class T07ej3 {
     }
 
     public static void pedirNombre(Map<String, Double> productos) {
-        String cantidadProd=JOptionPane.showInputDialog(null, "Introduce la cantidad de artículos comprados: ");
+        String cantidadProd=JOptionPane.showInputDialog(null, "Introduce la "
+        		+ "cantidad de artículos comprados: ");
         for (int i = 0; i < Double.parseDouble(cantidadProd); i++) {
-            String articulo = JOptionPane.showInputDialog(null, "Introduce el artículo " + (i + 1));
+            String articulo = JOptionPane.showInputDialog(null, "Introduce "
+            		+ "el artículo " + (i + 1));
             double precio = Double.parseDouble(JOptionPane.showInputDialog(null,
                     "Introduce el precio de " + articulo, "Precio", JOptionPane.PLAIN_MESSAGE));
             productos.put(articulo, precio);
@@ -29,7 +31,8 @@ public class T07ej3 {
     public static void pedirMasNombres(Map<String, Double>productos, int respuesta) {
     	int numero=productos.size();
     	if(respuesta==JOptionPane.YES_OPTION) {
-    		 String articulo = JOptionPane.showInputDialog(null, "Introduce el artículo " + (numero + 1));
+    		 String articulo = JOptionPane.showInputDialog(null, "Introduce "
+    		 		+ "el artículo " + (numero + 1));
              double precio = Double.parseDouble(JOptionPane.showInputDialog(null,
                      "Introduce el precio de " + articulo, "Precio", JOptionPane.PLAIN_MESSAGE));
              productos.put(articulo, precio);
@@ -46,7 +49,8 @@ public class T07ej3 {
         String consulta = JOptionPane.showInputDialog("Introduce el nombre del "
         		+ "artículo para consultar su precio: ");
         if (productos.containsKey(consulta)) {
-            JOptionPane.showMessageDialog(null, "El precio de " + consulta + " es €" + productos.get(consulta));
+            JOptionPane.showMessageDialog(null, "El precio de " + consulta + " es "
+            		+ "€" + productos.get(consulta));
         } else {
             JOptionPane.showMessageDialog(null, "El artículo no está en la base de datos.");
         }
