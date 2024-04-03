@@ -25,14 +25,14 @@ public class Main {
         int seriesEntregadas = contarEntregados(series);
         int videojuegosEntregados = contarEntregados(videojuegos);
 
-        System.out.println("Series entregadas: " + seriesEntregadas);
-        System.out.println("Videojuegos entregados: " + videojuegosEntregados);
+        System.out.println("\nSeries entregadas: " + seriesEntregadas);
+        System.out.println("\nVideojuegos entregados: " + videojuegosEntregados);
 
         Serie serieMasTemporadas = (Serie) obtenerMasEntregado(series);
         Videojuego videojuegoMasHoras = (Videojuego) obtenerMasEntregado(videojuegos);
 
-        System.out.println("Serie con más temporadas: " + serieMasTemporadas);
-        System.out.println("Videojuego con más horas estimadas: " + videojuegoMasHoras);
+        System.out.println("\nSerie con más temporadas: \n" + serieMasTemporadas);
+        System.out.println("\nVideojuego con más horas estimadas: \n" + videojuegoMasHoras);
     }
 
     // Método para contar elementos entregados
