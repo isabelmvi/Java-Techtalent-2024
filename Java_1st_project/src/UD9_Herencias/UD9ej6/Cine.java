@@ -4,42 +4,43 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-public class CineGUI extends JFrame {
+public class Cine extends JFrame {
     private JButton[][] asientos;
     public Pelicula[] peliculas = {new Pelicula("Toy Story", 90, 7, "John Lasseter"),
                                     new Pelicula("Harry Potter", 150, 12, "Chris Columbus"),
                                     new Pelicula("Titanic", 195, 16, "James Cameron"),
                                     new Pelicula("Oppenheimer", 152, 18, "Christopher Nolan")};
 
-    public CineGUI() {
+    public Cine() {
         setTitle("Cine");
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // Crear matriz de botones para representar los asientos del cine
-        JPanel panelAsientos = new JPanel(new GridLayout(8, 9)); 
-        asientos = new JButton[8][9];
+        JPanel panelAsientos = new JPanel(new GridLayout(9, 10)); // Añadimos una fila y una columna adicionales para las etiquetas
+        asientos = new JButton[9][10];
         Random random = new Random();
 
         panelAsientos.setBorder(BorderFactory.createLineBorder(Color.BLACK, 80));
 
         // Etiquetas de las columnas
-        for (char c = 'A'; c <= 'I'; c++) {
-            JLabel columnaLabel = new JLabel(String.valueOf(c));
+        for (int columna = 0; columna < 10; columna++) {
+            JLabel columnaLabel = new JLabel(columna == 0 ? "" : String.valueOf(columna));
             columnaLabel.setHorizontalAlignment(JLabel.CENTER);
             panelAsientos.add(columnaLabel);
         }
 
-        for (int fila = 8; fila >= 1; fila--) { // Comienza desde la fila 8 y va hacia abajo
+        for (int fila = 1; fila < 9; fila++) { // Comienza desde la fila 1 y va hacia abajo
             // Etiqueta de fila
             JLabel filaLabel = new JLabel(String.valueOf(fila));
             filaLabel.setHorizontalAlignment(JLabel.CENTER);
             panelAsientos.add(filaLabel);
             
-            for (char columna = 'A'; columna <= 'I'; columna++) {
-                JButton button = new JButton(columna + String.valueOf(fila)); // Agrega el texto del botón como letra de columna y número de fila
+            for (int columna = 1; columna < 10; columna++) {
+                char letraColumna = (char) ('A' + columna - 1);
+                JButton button = new JButton(letraColumna + String.valueOf(fila)); // Agrega el texto del botón como letra de columna y número de fila
                 button.setPreferredSize(new Dimension(50, 50));
-                asientos[fila-1][columna-'A'] = button; // Ajusta el índice de la fila
+                asientos[fila-1][columna-1] = button; // Ajusta el índice de la fila y columna
                 panelAsientos.add(button); 
 
                 // Determinar si el asiento está ocupado aleatoriamente
@@ -54,29 +55,28 @@ public class CineGUI extends JFrame {
                     button.addActionListener(e -> {
                         // Obtener la película seleccionada
                         Pelicula peliculaSeleccionada = (Pelicula) JOptionPane.showInputDialog(
-	                		null,
-	                        "Seleccione una película:",
-	                        "Selección de Película",
-	                        JOptionPane.QUESTION_MESSAGE,
-	                        null,
-	                        peliculas,
-	                        peliculas[0]);
+                            null,
+                            "Seleccione una película:",
+                            "Selección de Película",
+                            JOptionPane.QUESTION_MESSAGE,
+                            null,
+                            peliculas,
+                            peliculas[0]);
                         
-			                    // Crear panel para mostrar información de la película seleccionada
-			                    JPanel panelInfoPelicula = new JPanel(new GridLayout(2, 1));
-			                    panelInfoPelicula.setBorder(BorderFactory.createTitledBorder("Información de la película"));
-			
-			                    // Añadir etiquetas con información de la película
-			                    JLabel duracionLabel = new JLabel("Duración: " + peliculaSeleccionada.getDuracion() + " minutos");
-			                    JLabel directorLabel = new JLabel("Director: " + peliculaSeleccionada.getDirector());
-			
-			                    // Añadir etiquetas al panel
-			                    panelInfoPelicula.add(duracionLabel);
-			                    panelInfoPelicula.add(directorLabel);
-			                    
-			                    // Mostrar panel con información de la película
-			                    JOptionPane.showMessageDialog(null, panelInfoPelicula, "Información"
-			                    		+ " de la película", JOptionPane.INFORMATION_MESSAGE);
+                            // Crear panel para mostrar información de la película seleccionada
+                            JPanel panelInfoPelicula = new JPanel(new GridLayout(2, 1));
+                            panelInfoPelicula.setBorder(BorderFactory.createTitledBorder("Información de la película"));
+            
+                            // Añadir etiquetas con información de la película
+                            JLabel duracionLabel = new JLabel("Duración: " + peliculaSeleccionada.getDuracion() + " minutos");
+                            JLabel directorLabel = new JLabel("Director: " + peliculaSeleccionada.getDirector());
+            
+                            // Añadir etiquetas al panel
+                            panelInfoPelicula.add(duracionLabel);
+                            panelInfoPelicula.add(directorLabel);
+                            
+                            // Mostrar panel con información de la película
+                            JOptionPane.showMessageDialog(null, panelInfoPelicula, "Información de la película", JOptionPane.INFORMATION_MESSAGE);
 
                         if (peliculaSeleccionada != null) {
                             int edadMinima = peliculaSeleccionada.getEdadMinima();
@@ -97,8 +97,7 @@ public class CineGUI extends JFrame {
                                 button.setEnabled(false); // Deshabilitar el botón
 
                             } else {
-                                JOptionPane.showMessageDialog(null, "El cliente no "
-                                		+ "cumple con los requisitos para ver la película.");
+                                JOptionPane.showMessageDialog(null, "El cliente no cumple con los requisitos para ver la película.");
                             }
                         }
                     });
@@ -112,8 +111,8 @@ public class CineGUI extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            CineGUI cineGUI = new CineGUI();
-            cineGUI.setVisible(true);
+            Cine Cine = new Cine();
+            Cine.setVisible(true);
         });
     }
 }
