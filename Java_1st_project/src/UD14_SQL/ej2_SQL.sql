@@ -1,27 +1,20 @@
 CREATE DATABASE biblio;
 USE biblio;
 
-CREATE TABLE editorial (
-    claveditorial SMALLINT NOT NULL,
-    nombre VARCHAR(60),
-    direccion VARCHAR(60),
-    telefono VARCHAR(15),
-    PRIMARY KEY (claveditorial));
-    PRIMARY KEY (claveditorial);
-
+biblio
 CREATE TABLE tema (
     clavetema SMALLINT NOT NULL,
     nombre VARCHAR(40),
     PRIMARY KEY (clavetema));
 
-CREATE TABLE autor (
+CREATE TABLE autor (biblio
     claveautor SMALLINT NOT NULL,
     nombre VARCHAR(60),
     PRIMARY KEY (claveautor));
 
 CREATE TABLE socio (
     clavesocio SMALLINT NOT NULL,
-    nombre VARCHAR(60),
+    nombre VARCHAR(60),      
     direccion VARCHAR(60),
     telefono VARCHAR(15),
     categoria CHAR,
