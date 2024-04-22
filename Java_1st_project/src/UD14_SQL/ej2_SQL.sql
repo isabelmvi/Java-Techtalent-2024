@@ -32,7 +32,8 @@ CREATE TABLE libro (
     REFERENCES editorial (claveditorial) 
     ON DELETE SET NULL
     ON UPDATE CASCADE);
-    CREATE TABLE ejemplar (
+
+CREATE TABLE ejemplar (
         claveejemplar INT NOT NULL, 
         clavelibro INT NOT NULL,
         numerorden SMALLINT NOT NULL,
