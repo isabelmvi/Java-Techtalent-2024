@@ -1,40 +1,58 @@
-CREATE DATABASE tienda_informatica,
-USE tienda_informatica,
+CREATE DATABASE cientificos_proyecto,
+USE cientificos_proyecto,
 
-CREATE TABLE fabricantes(
-    Codigo int NOT NULL,
-    PRIMARY KEY (Codigo),
-    Nombre VARCHAR(100)
+CREATE TABLE cientificos(
+    DNI VARCHAR(9) NOT NULL,
+    PRIMARY KEY (DNI),
+    NomApels 
+    VARCHAR(255)
 )
-INSERT INTO fabricantes (Codigo, Nombre) VALUES
-(1, 'Fabricante A'),
-(2, 'Fabricante B'),
-(3, 'Fabricante C'),
-(4, 'Fabricante D'),
-(5, 'Fabricante E'),
-(6, 'Fabricante F'),
-(7, 'Fabricante G'),
-(8, 'Fabricante H'),
-(9, 'Fabricante I'),
-(10, 'Fabricante J');
+INSERT INTO cientificos (DNI, NomApels) VALUES
+('123456789', 'Juan Pérez'),
+('987654321', 'María García'),
+('456789123', 'Pedro López'),
+('789123456', 'Ana Martínez'),
+('321654987', 'Carlos Sánchez'),
+('654987321', 'Laura Rodríguez'),
+('147258369', 'David Fernández'),
+('258369147', 'Sofía Ruiz'),
+('369147258', 'Pablo Gómez'),
+('741852963', 'Elena Díaz');
 
 
-CREATE TABLE articulos(
-    Codigo int NOT NULL,
-    PRIMARY KEY (Codigo),
-    Nombre VARCHAR(100),
-    Precio int NOT NULL,
-    Fabricante int NOT NULL,
-    FOREIGN KEY (Fabricante) REFERENCES fabricantes(Codigo)
+CREATE TABLE proyecto(
+    id CHAR(4) NOT NULL,
+    PRIMARY KEY(id),
+    Nombre VARCHAR(255),
+    Horas int NOT NULL
 )
-INSERT INTO articulos (Codigo, Nombre, Precio, Fabricante) VALUES
-(101, 'Artículo 1', 50, 1),
-(102, 'Artículo 2', 60, 1),
-(103, 'Artículo 3', 70, 2),
-(104, 'Artículo 4', 80, 2),
-(105, 'Artículo 5', 90, 3),
-(106, 'Artículo 6', 100, 3),
-(107, 'Artículo 7', 110, 4),
-(108, 'Artículo 8', 120, 4),
-(109, 'Artículo 9', 130, 5),
-(110, 'Artículo 10', 140, 5);
+INSERT INTO proyecto (id, Nombre, Horas) VALUES
+('P001', 'Proyecto A', 100),
+('P002', 'Proyecto B', 150),
+('P003', 'Proyecto C', 200),
+('P004', 'Proyecto D', 120),
+('P005', 'Proyecto E', 180),
+('P006', 'Proyecto F', 90),
+('P007', 'Proyecto G', 140),
+('P008', 'Proyecto H', 170),
+('P009', 'Proyecto I', 130),
+('P010', 'Proyecto J', 160);
+
+
+CREATE TABLE asignado_a(
+    Cientifico VARCHAR(8) NOT NULL,
+    FOREIGN KEY(Cientifico) REFERENCES cientificos(DNI),
+    Proyecto CHAR(4) NOT NULL,
+    FOREIGN KEY(Proyecto) REFERENCES proyecto(id),
+)
+INSERT INTO asignado_a (Cientifico, Proyecto) VALUES
+('12345678', 'P001'),
+('98765432', 'P002'),
+('45678912', 'P003'),
+('78912345', 'P004'),
+('32165498', 'P005'),
+('65498732', 'P006'),
+('14725836', 'P007'),
+('25836914', 'P008'),
+('36914725', 'P009'),
+('74185296', 'P010');
