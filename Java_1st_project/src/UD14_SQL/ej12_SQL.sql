@@ -1,35 +1,36 @@
-CREATE DATABASE IF NOT EXISTS `academia_idiomas` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `academia_idiomas`;
+-- Creación de la tabla Alumnos
+CREATE TABLE Alumnos (
+    Nombre VARCHAR(50),
+    Apellido1 VARCHAR(50),
+    Apellido2 VARCHAR(50),
+    DNI VARCHAR(9) PRIMARY KEY,
+    Direccion VARCHAR(100),
+    Sexo CHAR(1) CHECK (Sexo IN ('M', 'H')),
+    FechaNacimiento DATE,
+    Curso INT,
+    FOREIGN KEY (Curso) REFERENCES Cursos(cod_Curso)
+);
 
-CREATE TABLE `alumnos` (
-  `Nombre` varchar(50) DEFAULT NULL,
-  `Apellido1` varchar(50) DEFAULT NULL,
-  `Apellido2` varchar(50) DEFAULT NULL,
-  `DNI` varchar(9) NOT NULL,
-  `Direccion` varchar(100) DEFAULT NULL,
-  `Sexo` char(1) DEFAULT NULL CHECK (`Sexo` in ('M','H')),
-  `FechaNacimiento` date DEFAULT NULL,
-  `Curso` int(11) DEFAULT NULL
-   ADD CONSTRAINT `alumnos_ibfk_1` FOREIGN KEY (`Curso`) REFERENCES `cursos` (`cod_Curso`);
-) 
+-- Creación de la tabla Cursos
+CREATE TABLE Cursos (
+    Nombre_curso VARCHAR(100) UNIQUE,
+    cod_Curso INT PRIMARY KEY,
+    DNI_profesor VARCHAR(9),
+    Max_alumnos INT,
+    Fecha_inicio DATE,
+    Fecha_fin DATE,
+    Num_horas INT,
+    CHECK (Fecha_inicio < Fecha_fin),
+    FOREIGN KEY (DNI_profesor) REFERENCES Profesores(DNI)
+);
 
-CREATE TABLE `cursos` (
-  `Nombre_curso` varchar(100) DEFAULT NULL,
-  `cod_Curso` int(11) NOT NULL,
-  `DNI_profesor` varchar(9) DEFAULT NULL,
-  `Max_alumnos` int(11) DEFAULT NULL,
-  `Fecha_inicio` date DEFAULT NULL,
-  `Fecha_fin` date DEFAULT NULL,
-  `Num_horas` int(11) DEFAULT NULL
-  ADD CONSTRAINT `cursos_ibfk_1` FOREIGN KEY (`DNI_profesor`) REFERENCES `profesores` (`DNI`)
-) ;
-
-CREATE TABLE `profesores` (
-  `Nombre` varchar(50) DEFAULT NULL,
-  `Apellido1` varchar(50) DEFAULT NULL,
-  `Apellido2` varchar(50) DEFAULT NULL,
-  `DNI` varchar(9) NOT NULL,
-  `Direccion` varchar(100) DEFAULT NULL,
-  `Titulo` varchar(100) DEFAULT NULL,
-  `Gana` varchar(100) NOT NULL
-)
+-- Creación de la tabla Profesores
+CREATE TABLE Profesores (
+    Nombre VARCHAR(50),
+    Apellido1 VARCHAR(50),
+    Apellido2 VARCHAR(50),
+    DNI VARCHAR(9) PRIMARY KEY,
+    Direccion VARCHAR(100),
+    Titulo VARCHAR(100),
+    Gana VARCHAR(100) NOT NULL
+);
