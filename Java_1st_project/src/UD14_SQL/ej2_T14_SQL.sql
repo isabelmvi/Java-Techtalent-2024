@@ -11,6 +11,7 @@ CREATE TABLE autor (biblio
     claveautor SMALLINT NOT NULL,
     nombre VARCHAR(60),
     PRIMARY KEY (claveautor));
+    
 
 CREATE TABLE socio (
     clavesocio SMALLINT NOT NULL,
