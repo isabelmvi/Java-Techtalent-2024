@@ -1,40 +1,30 @@
-CREATE DATABASE empleados,
-USE empleados,
+CREATE DATABASE IF NOT EXISTS `grandes_almacenes` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `grandes_almacenes`;
 
-CREATE TABLE departamentos(
-    Codigo int NOT NULL,
-    PRIMARY KEY (Codigo),
-    Nombre VARCHAR(100),
-    Presupuesto int
+CREATE TABLE `cajeros` (
+  `Codigo` int NOT NULL,
+  PRIMARY KEY(Codigo),
+  `NomApels` varchar(255)
 )
-INSERT INTO departamentos (Codigo, Nombre, Presupuesto) VALUES
-(1, 'Departamento de Ventas', 50000),
-(2, 'Departamento de Marketing', 60000),
-(3, 'Departamento de Recursos Humanos', 55000),
-(4, 'Departamento de Finanzas', 70000),
-(5, 'Departamento de Tecnología', 80000),
-(6, 'Departamento de Logística', 45000),
-(7, 'Departamento de Investigación y Desarrollo', 75000),
-(8, 'Departamento de Calidad', 65000),
-(9, 'Departamento de Producción', 70000),
-(10, 'Departamento de Servicio al Cliente', 60000);
 
-CREATE TABLE empleados(
-    DNI VARCHAR(9) NOT NULL,
-    PRIMARY KEY(DNI),
-    Nombre VARCHAR(100),
-    Apellidos VARCHAR(255),
-    Departamento int NOT NULL,
-    FOREIGN KEY (Departamento) REFERENCES departamentos(Codigo)
+CREATE TABLE `maquinas_registradoras` (
+  `Codigo` int NOT NULL,
+  PRIMARY KEY(Codigo),
+  `Piso` int
 )
-INSERT INTO empleados (DNI, Nombre, Apellidos, Departamento) VALUES
-('123456789', 'Juan', 'González', 1),
-('987654321', 'María', 'López', 2),
-('456789123', 'Pedro', 'Martínez', 3),
-('789123456', 'Laura', 'Pérez', 4),
-('321654987', 'Ana', 'Rodríguez', 5),
-('654987321', 'Carlos', 'Sánchez', 6),
-('879546231', 'Sara', 'García', 7),
-('234651978', 'David', 'Fernández', 8),
-('874512369', 'Elena', 'Díaz', 9),
-('965874123', 'Javier', 'Alonso', 10);
+
+CREATE TABLE `productos` (
+  `Codigo` int NOT NULL,
+  PRIMARY KEY(Codigo),
+  `Nombre` varchar(100) DEFAULT NULL,
+  `Precio` int DEFAULT NULL
+)
+
+CREATE TABLE `venta` (
+  `Cajero` int,
+  FOREIGN KEY (Cajero) REFERENCES cajeros(Codigo),
+  `Maquina` int,
+  FOREIGN KEY Maquina REFERENCES maquinas_registradoras(Codigo),
+  `Producto` int,
+  FOREIGN KEY Producto REFERENCES productos(Codigo)
+)
