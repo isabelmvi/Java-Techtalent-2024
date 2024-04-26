@@ -1,4 +1,3 @@
-package UD6JavaBasics;
 import javax.swing.JOptionPane;
 
 public class T06ej1 {

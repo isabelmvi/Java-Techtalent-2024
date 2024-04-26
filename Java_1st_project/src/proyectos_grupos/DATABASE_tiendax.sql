@@ -52,7 +52,7 @@ CREATE TABLE clientes (
 
  CREATE TABLE incluir (
     id_pedido CHAR(10),
-    PRIMARY KEY (id_pedido),
+    FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
     nom_prod VARCHAR(50),
     qty_prod_pedido INT,
     FOREIGN KEY (nom_prod) REFERENCES productos(nom_prod)

@@ -13,11 +13,11 @@ INSERT INTO facturas (id_factura, descripcion, fecha_factura) VALUES
 ('F005', 'Compra de herramientas', '2024-04-29');
 
 INSERT INTO productos (id_producto, nom_prod, qty_producto, bruto, tipo_prod) VALUES 
-('1', 'Portátil HP EliteBook', 50, 1200.00, 'E'),
-('2', 'Monitor Dell 27"', 100, 299.99, 'E'),
+('1', 'Portátil HP EliteBook', 50, 1200.00, 'N'),
+('2', 'Monitor Dell 27"', 100, 299.99, 'N'),
 ('3', 'Silla ergonómica', 30, 199.99, 'N'),
-('4', 'Impresora multifunción Epson', 40, 199.00, 'E'),
-('5', 'Teclado inalámbrico Logitech', 80, 49.99, 'E');
+('4', 'Impresora multifunción Epson', 40, 199.00, 'N'),
+('5', 'Teclado inalámbrico Logitech', 80, 49.99, 'N');
 
 INSERT INTO clientes (id_cliente, nombre, apel1, apel2, DNI, fecha_nacimiento, telefono, mail) VALUES 
 ('C001', 'María', 'González', 'López', '12345678A', '1990-03-15', 987654321, 'maria@example.com'),
