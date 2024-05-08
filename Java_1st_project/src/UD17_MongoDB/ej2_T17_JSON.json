@@ -1,0 +1,45 @@
+{
+    "departamentos": [
+      {"Codigo": 1, "Nombre": "Ventas", "Presupuesto": 10000},
+      {"Codigo": 2, "Nombre": "Recursos Humanos", "Presupuesto": 15000},
+      {"Codigo": 3, "Nombre": "Marketing", "Presupuesto": 20000},
+      {"Codigo": 4, "Nombre": "Desarrollo", "Presupuesto": 12000},
+      {"Codigo": 5, "Nombre": "Finanzas", "Presupuesto": 18000},
+      {"Codigo": 6, "Nombre": "Producción", "Presupuesto": 22000},
+      {"Codigo": 7, "Nombre": "Logística", "Presupuesto": 13000},
+      {"Codigo": 8, "Nombre": "Calidad", "Presupuesto": 19000},
+      {"Codigo": 9, "Nombre": "Tecnología", "Presupuesto": 17000},
+      {"Codigo": 10, "Nombre": "Administración", "Presupuesto": 21000},
+      {"Codigo": 11, "Nombre": "Calidad", "Presupuesto": 40000}
+    ],
+    "empleados": [
+      {"DNI": "11111111A", "Nombre": "Juan", "Apellidos": "González", "Departamento": 1},
+      {"DNI": "22222222B", "Nombre": "María", "Apellidos": "Martínez", "Departamento": 2},
+      {"DNI": "33333333C", "Nombre": "Antonio", "Apellidos": "Rodríguez", "Departamento": 3},
+      {"DNI": "44444444D", "Nombre": "Carmen", "Apellidos": "Pérez", "Departamento": 4},
+      {"DNI": "55555555E", "Nombre": "José", "Apellidos": "López", "Departamento": 5},
+      {"DNI": "66666666F", "Nombre": "Ana", "Apellidos": "Sánchez", "Departamento": 6},
+      {"DNI": "77777777G", "Nombre": "Manuel", "Apellidos": "Gómez", "Departamento": 7},
+      {"DNI": "88888888H", "Nombre": "Laura", "Apellidos": "Díaz", "Departamento": 8},
+      {"DNI": "99999999I", "Nombre": "Miguel", "Apellidos": "Fernández", "Departamento": 9},
+      {"DNI": "10101010J", "Nombre": "Elena", "Apellidos": "Ruiz", "Departamento": 10},
+      {"DNI": "89267109", "Nombre": "Esther", "Apellidos": "Vázquez", "Departamento": 11}
+    ],
+    "consultas": {
+      "apellidos_empleados": "SELECT Apellidos FROM empleados;",
+      "apellidos_unicos": "SELECT DISTINCT Apellidos FROM empleados;",
+      "empleados_apellido_lopez": "SELECT * FROM empleados WHERE Apellidos = 'López';",
+      "empleados_apellidos_lopez_perez": "SELECT * FROM empleados WHERE Apellidos = 'López' OR Apellidos = 'Pérez';",
+      "empleados_departamento_9": "SELECT * FROM empleados WHERE Departamento = 9;",
+      "empleados_departamentos_3_7": "SELECT * FROM empleados WHERE Departamento IN (3, 7);",
+      "empleados_apellido_p": "SELECT * FROM empleados WHERE Apellidos LIKE 'P%';",
+      "presupuesto_total_departamentos": "SELECT SUM(Presupuesto) AS Presupuesto_total FROM departamentos;",
+      "listado_completo_empleados_y_departamentos_1": "SELECT e.*, d.Nombre AS Nombre_departamento, d.Presupuesto FROM empleados e JOIN departamentos d ON e.Departamento = d.Codigo;",
+      "listado_completo_empleados_y_departamentos_2": "SELECT empleados.*, departamentos.Nombre AS Nombre_departamento, departamentos.Presupuesto FROM empleados JOIN departamentos ON empleados.Departamento = departamentos.Codigo;",
+      "listado_completo_empleados_y_departamentos_3": "SELECT e.Nombre, e.Apellidos, d.Nombre AS Nombre_departamento, d.Presupuesto FROM empleados e JOIN departamentos d ON e.Departamento = d.Codigo;",
+      "empleados_departamentos_presupuesto_mas_60000": "SELECT e.Nombre, e.Apellidos FROM empleados e JOIN departamentos d ON e.Departamento = d.Codigo WHERE d.Presupuesto > 60000;",
+      "departamentos_presupuesto_superior_media": "SELECT * FROM departamentos WHERE Presupuesto > (SELECT AVG(Presupuesto) FROM departamentos);",
+      "departamentos_mas_dos_empleados": "SELECT d.Nombre FROM departamentos d JOIN empleados e ON d.Codigo = e.Departamento GROUP BY d.Codigo HAVING COUNT(*) > 2;"
+    }
+  }
+  

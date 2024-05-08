@@ -1,0 +1,128 @@
+{
+    "almacenes": [
+      {
+        "Codigo": 1,
+        "Lugar": "Almacén A",
+        "Capacidad": 100
+      },
+      {
+        "Codigo": 2,
+        "Lugar": "Almacén B",
+        "Capacidad": 150
+      },
+      {
+        "Codigo": 3,
+        "Lugar": "Almacén C",
+        "Capacidad": 200
+      },
+      {
+        "Codigo": 4,
+        "Lugar": "Almacén D",
+        "Capacidad": 120
+      },
+      {
+        "Codigo": 5,
+        "Lugar": "Almacén E",
+        "Capacidad": 180
+      },
+      {
+        "Codigo": 6,
+        "Lugar": "Almacén F",
+        "Capacidad": 220
+      },
+      {
+        "Codigo": 7,
+        "Lugar": "Almacén G",
+        "Capacidad": 130
+      },
+      {
+        "Codigo": 8,
+        "Lugar": "Almacén H",
+        "Capacidad": 190
+      },
+      {
+        "Codigo": 9,
+        "Lugar": "Almacén I",
+        "Capacidad": 170
+      },
+      {
+        "Codigo": 10,
+        "Lugar": "Almacén J",
+        "Capacidad": 210
+      },
+      {
+        "Codigo": 11,
+        "Lugar": "Barcelona",
+        "Capacidad": 3
+      }
+    ],
+    "cajas": [
+      {
+        "NumReferencia": "A1234",
+        "Contenido": "Libros",
+        "Valor": 50,
+        "Almacen": 1
+      },
+      {
+        "NumReferencia": "B5678",
+        "Contenido": "Ropa",
+        "Valor": 100,
+        "Almacen": 2
+      },
+      {
+        "NumReferencia": "C91011",
+        "Contenido": "Electrodomésticos",
+        "Valor": 200,
+        "Almacen": 3
+      },
+      {
+        "NumReferencia": "D121314",
+        "Contenido": "Juguetes",
+        "Valor": 80,
+        "Almacen": 4
+      },
+      {
+        "NumReferencia": "E151617",
+        "Contenido": "Herramientas",
+        "Valor": 120,
+        "Almacen": 5
+      },
+      {
+        "NumReferencia": "F181920",
+        "Contenido": "Electrónica",
+        "Valor": 150,
+        "Almacen": 6
+      },
+      {
+        "NumReferencia": "G212223",
+        "Contenido": "Muebles",
+        "Valor": 300,
+        "Almacen": 7
+      },
+      {
+        "NumReferencia": "H242526",
+        "Contenido": "Comida",
+        "Valor": 70,
+        "Almacen": 8
+      },
+      {
+        "NumReferencia": "I272829",
+        "Contenido": "Artículos deportivos",
+        "Valor": 90,
+        "Almacen": 9
+      },
+      {
+        "NumReferencia": "J303132",
+        "Contenido": "Productos de limpieza",
+        "Valor": 60,
+        "Almacen": 10
+      },
+      {
+        "NumReferencia": "H5RT",
+        "Contenido": "Papel",
+        "Valor": 200,
+        "Almacen": 6
+      }
+    ]
+  }
+  

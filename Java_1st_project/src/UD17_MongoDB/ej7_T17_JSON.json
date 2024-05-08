@@ -1,0 +1,99 @@
+{
+    "database": "grandes_almacenes",
+    "character_set": "utf8mb4",
+    "collate": "utf8mb4_general_ci",
+    "tables": [
+      {
+        "name": "cajeros",
+        "columns": [
+          {
+            "name": "Codigo",
+            "type": "int",
+            "not_null": true
+          },
+          {
+            "name": "NomApels",
+            "type": "varchar(255)"
+          }
+        ],
+        "primary_key": "Codigo"
+      },
+      {
+        "name": "maquinas_registradoras",
+        "columns": [
+          {
+            "name": "Codigo",
+            "type": "int",
+            "not_null": true
+          },
+          {
+            "name": "Piso",
+            "type": "int"
+          }
+        ],
+        "primary_key": "Codigo"
+      },
+      {
+        "name": "productos",
+        "columns": [
+          {
+            "name": "Codigo",
+            "type": "int",
+            "not_null": true
+          },
+          {
+            "name": "Nombre",
+            "type": "varchar(100)",
+            "default": "NULL"
+          },
+          {
+            "name": "Precio",
+            "type": "int",
+            "default": "NULL"
+          }
+        ],
+        "primary_key": "Codigo"
+      },
+      {
+        "name": "venta",
+        "columns": [
+          {
+            "name": "Cajero",
+            "type": "int"
+          },
+          {
+            "name": "Maquina",
+            "type": "int"
+          },
+          {
+            "name": "Producto",
+            "type": "int"
+          }
+        ],
+        "foreign_keys": [
+          {
+            "column": "Cajero",
+            "references": {
+              "table": "cajeros",
+              "column": "Codigo"
+            }
+          },
+          {
+            "column": "Maquina",
+            "references": {
+              "table": "maquinas_registradoras",
+              "column": "Codigo"
+            }
+          },
+          {
+            "column": "Producto",
+            "references": {
+              "table": "productos",
+              "column": "Codigo"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

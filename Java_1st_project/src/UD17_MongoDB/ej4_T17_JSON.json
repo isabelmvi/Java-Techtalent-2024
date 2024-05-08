@@ -1,0 +1,28 @@
+{
+    "database": "peliculasysalas",
+    "tables": {
+      "peliculas": {
+        "columns": {
+          "Codigo": "int(11) NOT NULL AUTO_INCREMENT",
+          "Nombre": "varchar(100) DEFAULT NULL",
+          "CalificacionEdad": "int(11) DEFAULT NULL"
+        },
+        "primary_key": "Codigo"
+      },
+      "salas": {
+        "columns": {
+          "Codigo": "int(11) NOT NULL AUTO_INCREMENT",
+          "Nombre": "varchar(100) DEFAULT NULL",
+          "Pelicula": "int(11) DEFAULT NULL"
+        },
+        "primary_key": "Codigo",
+        "foreign_keys": {
+          "Pelicula": {
+            "table": "peliculas",
+            "column": "Codigo"
+          }
+        }
+      }
+    }
+  }
+  

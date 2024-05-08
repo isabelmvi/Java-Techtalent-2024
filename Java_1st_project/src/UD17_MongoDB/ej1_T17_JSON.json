@@ -1,0 +1,30 @@
+{
+    "tienda_informatica": {
+      "fabricantes": [
+        {"Codigo": 1, "Nombre": "Fabricante A"},
+        {"Codigo": 2, "Nombre": "Fabricante B"},
+        {"Codigo": 3, "Nombre": "Fabricante C"},
+        {"Codigo": 4, "Nombre": "Fabricante D"},
+        {"Codigo": 5, "Nombre": "Fabricante E"},
+        {"Codigo": 6, "Nombre": "Fabricante F"},
+        {"Codigo": 7, "Nombre": "Fabricante G"},
+        {"Codigo": 8, "Nombre": "Fabricante H"},
+        {"Codigo": 9, "Nombre": "Fabricante I"},
+        {"Codigo": 10, "Nombre": "Fabricante J"}
+      ],
+      "articulos": [
+        {"Codigo": 1, "Nombre": "Articulo 1", "Precio": 100, "Fabricante": 1},
+        {"Codigo": 2, "Nombre": "Articulo 2", "Precio": 200, "Fabricante": 2},
+        {"Codigo": 3, "Nombre": "Articulo 3", "Precio": 150, "Fabricante": 3},
+        {"Codigo": 4, "Nombre": "Articulo 4", "Precio": 300, "Fabricante": 4},
+        {"Codigo": 5, "Nombre": "Articulo 5", "Precio": 120, "Fabricante": 5},
+        {"Codigo": 6, "Nombre": "Articulo 6", "Precio": 180, "Fabricante": 6},
+        {"Codigo": 7, "Nombre": "Articulo 7", "Precio": 250, "Fabricante": 7},
+        {"Codigo": 8, "Nombre": "Articulo 8", "Precio": 350, "Fabricante": 8},
+        {"Codigo": 9, "Nombre": "Articulo 9", "Precio": 220, "Fabricante": 9},
+        {"Codigo": 10, "Nombre": "Articulo 10", "Precio": 280, "Fabricante": 10},
+        {"Codigo": 11, "Nombre": "Nuevo producto", "Precio": 150, "Fabricante": 3}
+      ]
+    }
+  }
+  

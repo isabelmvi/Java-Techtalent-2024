@@ -1,0 +1,74 @@
+{
+    "colecciones": [
+      {
+        "nombre": "directores",
+        "campos": [
+          {
+            "nombre": "DNI",
+            "tipo": "varchar",
+            "tamaño": 9,
+            "requerido": true
+          },
+          {
+            "nombre": "NomApels",
+            "tipo": "varchar",
+            "tamaño": 255,
+            "default": null
+          },
+          {
+            "nombre": "DNIJefe",
+            "tipo": "varchar",
+            "tamaño": 9,
+            "default": null
+          },
+          {
+            "nombre": "despacho",
+            "tipo": "int",
+            "tamaño": 11,
+            "requerido": true
+          }
+        ],
+        "clave_primaria": ["DNI"],
+        "claves_foraneas": [
+          {
+            "campo": "DNIJefe",
+            "referencia": {
+              "coleccion": "directores",
+              "campo": "DNI",
+              "accion_eliminar": "CASCADE",
+              "accion_actualizar": "CASCADE"
+            }
+          },
+          {
+            "campo": "despacho",
+            "referencia": {
+              "coleccion": "despachos",
+              "campo": "num",
+              "accion_eliminar": "CASCADE",
+              "accion_actualizar": "CASCADE"
+            }
+          }
+        ]
+      },
+      {
+        "nombre": "despachos",
+        "campos": [
+          {
+            "nombre": "num",
+            "tipo": "int",
+            "tamaño": 11,
+            "requerido": true,
+            "auto_increment": true
+          },
+          {
+            "nombre": "Capacidad",
+            "tipo": "int",
+            "tamaño": 11,
+            "requerido": true
+          }
+        ],
+        "clave_primaria": ["num"]
+      }
+    ]
+  }
+  

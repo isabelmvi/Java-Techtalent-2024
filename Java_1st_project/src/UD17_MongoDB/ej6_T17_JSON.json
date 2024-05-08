@@ -1,0 +1,52 @@
+{
+    "database": "piezas_proveedores",
+    "tables": {
+      "piezas": {
+        "fields": {
+          "Codigo": {
+            "type": "int",
+            "constraints": ["NOT NULL"]
+          },
+          "Nombre": {
+            "type": "VARCHAR(100)"
+          }
+        },
+        "PRIMARY KEY": ["Codigo"]
+      },
+      "proveedores": {
+        "fields": {
+          "id": {
+            "type": "CHAR(4)",
+            "constraints": ["NOT NULL"]
+          },
+          "Nombre": {
+            "type": "VARCHAR(100)"
+          }
+        },
+        "PRIMARY KEY": ["id"]
+      },
+      "suminstra": {
+        "fields": {
+          "CodigoPieza": {
+            "type": "int",
+            "foreign_key": {
+              "table": "piezas",
+              "references": "Codigo"
+            }
+          },
+          "idProveedor": {
+            "type": "CHAR(4)",
+            "foreign_key": {
+              "table": "proveedores",
+              "references": "id"
+            }
+          },
+          "precio": {
+            "type": "int",
+            "constraints": ["NOT NULL"]
+          }
+        }
+      }
+    }
+  }
+  

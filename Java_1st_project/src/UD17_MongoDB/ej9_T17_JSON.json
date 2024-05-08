@@ -1,0 +1,69 @@
+{
+    "investigadores_facultad": {
+      "equipos": [
+        {
+          "NumSerie": "0001",
+          "Nombre": "Equipo 1",
+          "Facultad": 1
+        },
+        {
+          "NumSerie": "0002",
+          "Nombre": "Equipo 2",
+          "Facultad": 2
+        },
+        {
+          "NumSerie": "0003",
+          "Nombre": "Equipo 3",
+          "Facultad": 1
+        }
+      ],
+      "facultad": [
+        {
+          "Codigo": 1,
+          "Nombre": "Facultad de Ciencias"
+        },
+        {
+          "Codigo": 2,
+          "Nombre": "Facultad de Ingeniería"
+        }
+      ],
+      "investigadores": [
+        {
+          "DNI": "123456789",
+          "NomApels": "Investigador 1",
+          "Facultad": 1
+        },
+        {
+          "DNI": "987654321",
+          "NomApels": "Investigador 2",
+          "Facultad": 2
+        },
+        {
+          "DNI": "456789123",
+          "NomApels": "Investigador 3",
+          "Facultad": 1
+        }
+      ],
+      "reserva": [
+        {
+          "DNI": "123456789",
+          "NumSerie": "0001",
+          "Comienzo": "2024-05-04",
+          "Fin": "2025-05-03"
+        },
+        {
+          "DNI": "987654321",
+          "NumSerie": "0002",
+          "Comienzo": "2024-05-04",
+          "Fin": "2025-05-03"
+        },
+        {
+          "DNI": "456789123",
+          "NumSerie": "0003",
+          "Comienzo": "2024-05-04",
+          "Fin": "2025-05-03"
+        }
+      ]
+    }
+  }
+  

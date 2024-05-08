@@ -1,0 +1,33 @@
+{
+    "investigadores_facultad": {
+      "equipos": [
+        {
+          "NumSerie": "XXXX",
+          "Nombre": "Nombre_equipo",
+          "Facultad": 1
+        }
+      ],
+      "facultad": [
+        {
+          "Codigo": 1,
+          "Nombre": "Nombre_facultad"
+        }
+      ],
+      "investigadores": [
+        {
+          "DNI": "XXXXXXXXX",
+          "NomApels": "Nombre_Apellido",
+          "Facultad": 1
+        }
+      ],
+      "reserva": [
+        {
+          "DNI": "XXXXXXXXX",
+          "NumSerie": "XXXX",
+          "Comienzo": "2024-05-04",
+          "Fin": "2025-05-03"
+        }
+      ]
+    }
+  }
+  
