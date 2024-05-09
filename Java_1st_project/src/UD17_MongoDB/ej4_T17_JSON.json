@@ -1,28 +1,106 @@
 {
-    "database": "peliculasysalas",
-    "tables": {
-      "peliculas": {
-        "columns": {
-          "Codigo": "int(11) NOT NULL AUTO_INCREMENT",
-          "Nombre": "varchar(100) DEFAULT NULL",
-          "CalificacionEdad": "int(11) DEFAULT NULL"
-        },
-        "primary_key": "Codigo"
-      },
-      "salas": {
-        "columns": {
-          "Codigo": "int(11) NOT NULL AUTO_INCREMENT",
-          "Nombre": "varchar(100) DEFAULT NULL",
-          "Pelicula": "int(11) DEFAULT NULL"
-        },
-        "primary_key": "Codigo",
-        "foreign_keys": {
-          "Pelicula": {
-            "table": "peliculas",
-            "column": "Codigo"
-          }
-        }
-      }
+  "peliculas": [
+    {
+      "Codigo": 1,
+      "Nombre": "The Shawshank Redemption",
+      "CalificacionEdad": 18
+    },
+    {
+      "Codigo": 2,
+      "Nombre": "The Godfather",
+      "CalificacionEdad": 18
+    },
+    {
+      "Codigo": 3,
+      "Nombre": "The Dark Knight",
+      "CalificacionEdad": 13
+    },
+    {
+      "Codigo": 4,
+      "Nombre": "Pulp Fiction",
+      "CalificacionEdad": 18
+    },
+    {
+      "Codigo": 5,
+      "Nombre": "Schindler's List",
+      "CalificacionEdad": 13
+    },
+    {
+      "Codigo": 6,
+      "Nombre": "Inception",
+      "CalificacionEdad": 13
+    },
+    {
+      "Codigo": 7,
+      "Nombre": "Fight Club",
+      "CalificacionEdad": 18
+    },
+    {
+      "Codigo": 8,
+      "Nombre": "Forrest Gump",
+      "CalificacionEdad": 13
+    },
+    {
+      "Codigo": 9,
+      "Nombre": "The Matrix",
+      "CalificacionEdad": 18
+    },
+    {
+      "Codigo": 10,
+      "Nombre": "Interstellar",
+      "CalificacionEdad": 13
     }
-  }
-  
+  ],
+  "salas": [
+    {
+      "Codigo": 1,
+      "Nombre": "Sala 1",
+      "Pelicula": 1
+    },
+    {
+      "Codigo": 2,
+      "Nombre": "Sala 2",
+      "Pelicula": 2
+    },
+    {
+      "Codigo": 3,
+      "Nombre": "Sala 3",
+      "Pelicula": 3
+    },
+    {
+      "Codigo": 4,
+      "Nombre": "Sala 4",
+      "Pelicula": 4
+    },
+    {
+      "Codigo": 5,
+      "Nombre": "Sala 5",
+      "Pelicula": 5
+    },
+    {
+      "Codigo": 6,
+      "Nombre": "Sala 6",
+      "Pelicula": 6
+    },
+    {
+      "Codigo": 7,
+      "Nombre": "Sala 7",
+      "Pelicula": 7
+    },
+    {
+      "Codigo": 8,
+      "Nombre": "Sala 8",
+      "Pelicula": 8
+    },
+    {
+      "Codigo": 9,
+      "Nombre": "Sala 9",
+      "Pelicula": 9
+    },
+    {
+      "Codigo": 10,
+      "Nombre": "Sala 10",
+      "Pelicula": 10
+    }
+  ]
+}
