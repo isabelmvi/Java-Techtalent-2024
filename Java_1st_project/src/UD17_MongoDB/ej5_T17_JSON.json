@@ -1,74 +1,106 @@
 {
-    "colecciones": [
-      {
-        "nombre": "directores",
-        "campos": [
-          {
-            "nombre": "DNI",
-            "tipo": "varchar",
-            "tamaño": 9,
-            "requerido": true
-          },
-          {
-            "nombre": "NomApels",
-            "tipo": "varchar",
-            "tamaño": 255,
-            "default": null
-          },
-          {
-            "nombre": "DNIJefe",
-            "tipo": "varchar",
-            "tamaño": 9,
-            "default": null
-          },
-          {
-            "nombre": "despacho",
-            "tipo": "int",
-            "tamaño": 11,
-            "requerido": true
-          }
-        ],
-        "clave_primaria": ["DNI"],
-        "claves_foraneas": [
-          {
-            "campo": "DNIJefe",
-            "referencia": {
-              "coleccion": "directores",
-              "campo": "DNI",
-              "accion_eliminar": "CASCADE",
-              "accion_actualizar": "CASCADE"
-            }
-          },
-          {
-            "campo": "despacho",
-            "referencia": {
-              "coleccion": "despachos",
-              "campo": "num",
-              "accion_eliminar": "CASCADE",
-              "accion_actualizar": "CASCADE"
-            }
-          }
-        ]
-      },
-      {
-        "nombre": "despachos",
-        "campos": [
-          {
-            "nombre": "num",
-            "tipo": "int",
-            "tamaño": 11,
-            "requerido": true,
-            "auto_increment": true
-          },
-          {
-            "nombre": "Capacidad",
-            "tipo": "int",
-            "tamaño": 11,
-            "requerido": true
-          }
-        ],
-        "clave_primaria": ["num"]
-      }
-    ]
-  }
-  
+  "directores": [
+    {
+      "DNI": "123456789",
+      "NomApels": "Christopher Nolan",
+      "DNIJefe": null,
+      "despacho": 101
+    },
+    {
+      "DNI": "987654321",
+      "NomApels": "Steven Spielberg",
+      "DNIJefe": null,
+      "despacho": 102
+    },
+    {
+      "DNI": "567890123",
+      "NomApels": "Quentin Tarantino",
+      "DNIJefe": null,
+      "despacho": 103
+    },
+    {
+      "DNI": "321098765",
+      "NomApels": "Martin Scorsese",
+      "DNIJefe": null,
+      "despacho": 104
+    },
+    {
+      "DNI": "789012345",
+      "NomApels": "Alfred Hitchcock",
+      "DNIJefe": null,
+      "despacho": 105
+    },
+    {
+      "DNI": "234567890",
+      "NomApels": "Stanley Kubrick",
+      "DNIJefe": null,
+      "despacho": 106
+    },
+    {
+      "DNI": "654321098",
+      "NomApels": "James Cameron",
+      "DNIJefe": null,
+      "despacho": 107
+    },
+    {
+      "DNI": "890123456",
+      "NomApels": "Tim Burton",
+      "DNIJefe": null,
+      "despacho": 108
+    },
+    {
+      "DNI": "456789012",
+      "NomApels": "Ridley Scott",
+      "DNIJefe": null,
+      "despacho": 109
+    },
+    {
+      "DNI": "012345678",
+      "NomApels": "Clint Eastwood",
+      "DNIJefe": null,
+      "despacho": 110
+    }
+  ],
+  "despachos": [
+    {
+      "num": 101,
+      "Capacidad": 10
+    },
+    {
+      "num": 102,
+      "Capacidad": 8
+    },
+    {
+      "num": 103,
+      "Capacidad": 12
+    },
+    {
+      "num": 104,
+      "Capacidad": 9
+    },
+    {
+      "num": 105,
+      "Capacidad": 15
+    },
+    {
+      "num": 106,
+      "Capacidad": 11
+    },
+    {
+      "num": 107,
+      "Capacidad": 14
+    },
+    {
+      "num": 108,
+      "Capacidad": 7
+    },
+    {
+      "num": 109,
+      "Capacidad": 13
+    },
+    {
+      "num": 110,
+      "Capacidad": 6
+    }
+  ]
+}

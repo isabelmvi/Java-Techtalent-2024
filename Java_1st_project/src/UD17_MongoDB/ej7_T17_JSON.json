@@ -1,99 +1,192 @@
 {
-    "database": "grandes_almacenes",
-    "character_set": "utf8mb4",
-    "collate": "utf8mb4_general_ci",
-    "tables": [
+  "grandes_almacenes": {
+    "cajeros": [
       {
-        "name": "cajeros",
-        "columns": [
-          {
-            "name": "Codigo",
-            "type": "int",
-            "not_null": true
-          },
-          {
-            "name": "NomApels",
-            "type": "varchar(255)"
-          }
-        ],
-        "primary_key": "Codigo"
+        "Codigo": 1,
+        "NomApels": "Juan Pérez"
       },
       {
-        "name": "maquinas_registradoras",
-        "columns": [
-          {
-            "name": "Codigo",
-            "type": "int",
-            "not_null": true
-          },
-          {
-            "name": "Piso",
-            "type": "int"
-          }
-        ],
-        "primary_key": "Codigo"
+        "Codigo": 2,
+        "NomApels": "María Gómez"
       },
       {
-        "name": "productos",
-        "columns": [
-          {
-            "name": "Codigo",
-            "type": "int",
-            "not_null": true
-          },
-          {
-            "name": "Nombre",
-            "type": "varchar(100)",
-            "default": "NULL"
-          },
-          {
-            "name": "Precio",
-            "type": "int",
-            "default": "NULL"
-          }
-        ],
-        "primary_key": "Codigo"
+        "Codigo": 3,
+        "NomApels": "Carlos Rodríguez"
       },
       {
-        "name": "venta",
-        "columns": [
-          {
-            "name": "Cajero",
-            "type": "int"
-          },
-          {
-            "name": "Maquina",
-            "type": "int"
-          },
-          {
-            "name": "Producto",
-            "type": "int"
-          }
-        ],
-        "foreign_keys": [
-          {
-            "column": "Cajero",
-            "references": {
-              "table": "cajeros",
-              "column": "Codigo"
-            }
-          },
-          {
-            "column": "Maquina",
-            "references": {
-              "table": "maquinas_registradoras",
-              "column": "Codigo"
-            }
-          },
-          {
-            "column": "Producto",
-            "references": {
-              "table": "productos",
-              "column": "Codigo"
-            }
-          }
-        ]
+        "Codigo": 4,
+        "NomApels": "Ana López"
+      },
+      {
+        "Codigo": 5,
+        "NomApels": "Pedro Martínez"
+      },
+      {
+        "Codigo": 6,
+        "NomApels": "Laura Sánchez"
+      },
+      {
+        "Codigo": 7,
+        "NomApels": "Diego García"
+      },
+      {
+        "Codigo": 8,
+        "NomApels": "Sofía Fernández"
+      },
+      {
+        "Codigo": 9,
+        "NomApels": "Manuel Ruiz"
+      },
+      {
+        "Codigo": 10,
+        "NomApels": "Elena Díaz"
+      }
+    ],
+    "maquinas_registradoras": [
+      {
+        "Codigo": 1,
+        "Piso": 1
+      },
+      {
+        "Codigo": 2,
+        "Piso": 2
+      },
+      {
+        "Codigo": 3,
+        "Piso": 1
+      },
+      {
+        "Codigo": 4,
+        "Piso": 3
+      },
+      {
+        "Codigo": 5,
+        "Piso": 2
+      },
+      {
+        "Codigo": 6,
+        "Piso": 1
+      },
+      {
+        "Codigo": 7,
+        "Piso": 3
+      },
+      {
+        "Codigo": 8,
+        "Piso": 2
+      },
+      {
+        "Codigo": 9,
+        "Piso": 1
+      },
+      {
+        "Codigo": 10,
+        "Piso": 3
+      }
+    ],
+    "productos": [
+      {
+        "Codigo": 101,
+        "Nombre": "Camiseta básica",
+        "Precio": 10
+      },
+      {
+        "Codigo": 102,
+        "Nombre": "Pantalón vaquero",
+        "Precio": 30
+      },
+      {
+        "Codigo": 103,
+        "Nombre": "Zapatillas deportivas",
+        "Precio": 50
+      },
+      {
+        "Codigo": 104,
+        "Nombre": "Gafas de sol",
+        "Precio": 20
+      },
+      {
+        "Codigo": 105,
+        "Nombre": "Reloj de pulsera",
+        "Precio": 100
+      },
+      {
+        "Codigo": 106,
+        "Nombre": "Mochila escolar",
+        "Precio": 25
+      },
+      {
+        "Codigo": 107,
+        "Nombre": "Cartera de cuero",
+        "Precio": 40
+      },
+      {
+        "Codigo": 108,
+        "Nombre": "Bufanda de lana",
+        "Precio": 15
+      },
+      {
+        "Codigo": 109,
+        "Nombre": "Guantes de invierno",
+        "Precio": 12
+      },
+      {
+        "Codigo": 110,
+        "Nombre": "Sombrero de paja",
+        "Precio": 8
+      }
+    ],
+    "venta": [
+      {
+        "Cajero": 1,
+        "Maquina": 1,
+        "Producto": 101
+      },
+      {
+        "Cajero": 2,
+        "Maquina": 2,
+        "Producto": 102
+      },
+      {
+        "Cajero": 3,
+        "Maquina": 3,
+        "Producto": 103
+      },
+      {
+        "Cajero": 4,
+        "Maquina": 4,
+        "Producto": 104
+      },
+      {
+        "Cajero": 5,
+        "Maquina": 5,
+        "Producto": 105
+      },
+      {
+        "Cajero": 6,
+        "Maquina": 6,
+        "Producto": 106
+      },
+      {
+        "Cajero": 7,
+        "Maquina": 7,
+        "Producto": 107
+      },
+      {
+        "Cajero": 8,
+        "Maquina": 8,
+        "Producto": 108
+      },
+      {
+        "Cajero": 9,
+        "Maquina": 9,
+        "Producto": 109
+      },
+      {
+        "Cajero": 10,
+        "Maquina": 10,
+        "Producto": 110
       }
     ]
   }
-  
+}

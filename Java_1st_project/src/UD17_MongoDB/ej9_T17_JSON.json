@@ -1,69 +1,142 @@
 {
-    "investigadores_facultad": {
-      "equipos": [
-        {
-          "NumSerie": "0001",
-          "Nombre": "Equipo 1",
-          "Facultad": 1
-        },
-        {
-          "NumSerie": "0002",
-          "Nombre": "Equipo 2",
-          "Facultad": 2
-        },
-        {
-          "NumSerie": "0003",
-          "Nombre": "Equipo 3",
-          "Facultad": 1
-        }
-      ],
-      "facultad": [
-        {
-          "Codigo": 1,
-          "Nombre": "Facultad de Ciencias"
-        },
-        {
-          "Codigo": 2,
-          "Nombre": "Facultad de Ingeniería"
-        }
-      ],
-      "investigadores": [
-        {
-          "DNI": "123456789",
-          "NomApels": "Investigador 1",
-          "Facultad": 1
-        },
-        {
-          "DNI": "987654321",
-          "NomApels": "Investigador 2",
-          "Facultad": 2
-        },
-        {
-          "DNI": "456789123",
-          "NomApels": "Investigador 3",
-          "Facultad": 1
-        }
-      ],
-      "reserva": [
-        {
-          "DNI": "123456789",
-          "NumSerie": "0001",
-          "Comienzo": "2024-05-04",
-          "Fin": "2025-05-03"
-        },
-        {
-          "DNI": "987654321",
-          "NumSerie": "0002",
-          "Comienzo": "2024-05-04",
-          "Fin": "2025-05-03"
-        },
-        {
-          "DNI": "456789123",
-          "NumSerie": "0003",
-          "Comienzo": "2024-05-04",
-          "Fin": "2025-05-03"
-        }
-      ]
-    }
+  "database": "cientificos_proyecto",
+  "tuples": {
+    "cientificos": [
+      {
+        "DNI": "123456789",
+        "NomApels": "María López"
+      },
+      {
+        "DNI": "987654321",
+        "NomApels": "Juan García"
+      },
+      {
+        "DNI": "456789123",
+        "NomApels": "Ana Martínez"
+      },
+      {
+        "DNI": "321654987",
+        "NomApels": "Pedro Rodríguez"
+      },
+      {
+        "DNI": "654321987",
+        "NomApels": "Laura Pérez"
+      },
+      {
+        "DNI": "789456123",
+        "NomApels": "Carlos Sánchez"
+      },
+      {
+        "DNI": "147258369",
+        "NomApels": "Elena González"
+      },
+      {
+        "DNI": "258369147",
+        "NomApels": "Sergio Fernández"
+      },
+      {
+        "DNI": "369147258",
+        "NomApels": "Carmen Ruiz"
+      },
+      {
+        "DNI": "852963147",
+        "NomApels": "David López"
+      }
+    ],
+    "proyecto": [
+      {
+        "id": "P001",
+        "Nombre": "Proyecto A",
+        "Horas": 100
+      },
+      {
+        "id": "P002",
+        "Nombre": "Proyecto B",
+        "Horas": 200
+      },
+      {
+        "id": "P003",
+        "Nombre": "Proyecto C",
+        "Horas": 150
+      },
+      {
+        "id": "P004",
+        "Nombre": "Proyecto D",
+        "Horas": 180
+      },
+      {
+        "id": "P005",
+        "Nombre": "Proyecto E",
+        "Horas": 220
+      },
+      {
+        "id": "P006",
+        "Nombre": "Proyecto F",
+        "Horas": 190
+      },
+      {
+        "id": "P007",
+        "Nombre": "Proyecto G",
+        "Horas": 130
+      },
+      {
+        "id": "P008",
+        "Nombre": "Proyecto H",
+        "Horas": 170
+      },
+      {
+        "id": "P009",
+        "Nombre": "Proyecto I",
+        "Horas": 210
+      },
+      {
+        "id": "P010",
+        "Nombre": "Proyecto J",
+        "Horas": 140
+      }
+    ]
+    [
+      {
+        "Cientifico": "123456789",
+        "Proyecto": "P002"
+      },
+      {
+        "Cientifico": "987654321",
+        "Proyecto": "P003"
+      },
+      {
+        "Cientifico": "456789123",
+        "Proyecto": "P004"
+      },
+      {
+        "Cientifico": "321654987",
+        "Proyecto": "P005"
+      },
+      {
+        "Cientifico": "654321987",
+        "Proyecto": "P006"
+      },
+      {
+        "Cientifico": "789456123",
+        "Proyecto": "P007"
+      },
+      {
+        "Cientifico": "147258369",
+        "Proyecto": "P008"
+      },
+      {
+        "Cientifico": "258369147",
+        "Proyecto": "P009"
+      },
+      {
+        "Cientifico": "369147258",
+        "Proyecto": "P010"
+      },
+      {
+        "Cientifico": "852963147",
+        "Proyecto": "P001"
+      }
+    ]
+    
   }
-  
+}

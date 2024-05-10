@@ -1,52 +1,140 @@
 {
-    "database": "piezas_proveedores",
-    "tables": {
-      "piezas": {
-        "fields": {
-          "Codigo": {
-            "type": "int",
-            "constraints": ["NOT NULL"]
-          },
-          "Nombre": {
-            "type": "VARCHAR(100)"
-          }
-        },
-        "PRIMARY KEY": ["Codigo"]
+  "piezas_proveedores": {
+    "piezas": [
+      {
+        "Codigo": 1,
+        "Nombre": "Tornillo Phillips 2 pulgadas"
       },
-      "proveedores": {
-        "fields": {
-          "id": {
-            "type": "CHAR(4)",
-            "constraints": ["NOT NULL"]
-          },
-          "Nombre": {
-            "type": "VARCHAR(100)"
-          }
-        },
-        "PRIMARY KEY": ["id"]
+      {
+        "Codigo": 2,
+        "Nombre": "Tuerca hexagonal M8"
       },
-      "suminstra": {
-        "fields": {
-          "CodigoPieza": {
-            "type": "int",
-            "foreign_key": {
-              "table": "piezas",
-              "references": "Codigo"
-            }
-          },
-          "idProveedor": {
-            "type": "CHAR(4)",
-            "foreign_key": {
-              "table": "proveedores",
-              "references": "id"
-            }
-          },
-          "precio": {
-            "type": "int",
-            "constraints": ["NOT NULL"]
-          }
-        }
+      {
+        "Codigo": 3,
+        "Nombre": "Cable eléctrico 16 AWG"
+      },
+      {
+        "Codigo": 4,
+        "Nombre": "Válvula de solenoide 24V"
+      },
+      {
+        "Codigo": 5,
+        "Nombre": "Interruptor de palanca SPST"
+      },
+      {
+        "Codigo": 6,
+        "Nombre": "Cinta métrica 5 metros"
+      },
+      {
+        "Codigo": 7,
+        "Nombre": "Broca para madera 10mm"
+      },
+      {
+        "Codigo": 8,
+        "Nombre": "Llave ajustable 8 pulgadas"
+      },
+      {
+        "Codigo": 9,
+        "Nombre": "Cable coaxial RG-6"
+      },
+      {
+        "Codigo": 10,
+        "Nombre": "Filtro de aire para automóvil"
       }
-    }
+    ],
+    "proveedores": [
+      {
+        "id": "ABCD",
+        "Nombre": "Ferretería El Martillo"
+      },
+      {
+        "id": "EFGH",
+        "Nombre": "Suministros Industriales S.A."
+      },
+      {
+        "id": "IJKL",
+        "Nombre": "Electrocomponentes López"
+      },
+      {
+        "id": "MNOP",
+        "Nombre": "Hidráulica y Neumática González"
+      },
+      {
+        "id": "QRST",
+        "Nombre": "Electricidad Rodríguez"
+      },
+      {
+        "id": "UVWX",
+        "Nombre": "Ferretería La Llave"
+      },
+      {
+        "id": "YZAB",
+        "Nombre": "Herramientas Martínez"
+      },
+      {
+        "id": "CDEF",
+        "Nombre": "Suministros de Mantenimiento Industrial S.L."
+      },
+      {
+        "id": "GHIJ",
+        "Nombre": "Electrónica Galindo"
+      },
+      {
+        "id": "KLMN",
+        "Nombre": "Repuestos Automotrices Pérez"
+      }
+    ],
+    "suministra": [
+      {
+        "CodigoPieza": 1,
+        "idProveedor": "ABCD",
+        "precio": 50
+      },
+      {
+        "CodigoPieza": 2,
+        "idProveedor": "EFGH",
+        "precio": 30
+      },
+      {
+        "CodigoPieza": 3,
+        "idProveedor": "IJKL",
+        "precio": 20
+      },
+      {
+        "CodigoPieza": 4,
+        "idProveedor": "MNOP",
+        "precio": 80
+      },
+      {
+        "CodigoPieza": 5,
+        "idProveedor": "QRST",
+        "precio": 15
+      },
+      {
+        "CodigoPieza": 6,
+        "idProveedor": "UVWX",
+        "precio": 10
+      },
+      {
+        "CodigoPieza": 7,
+        "idProveedor": "YZAB",
+        "precio": 12
+      },
+      {
+        "CodigoPieza": 8,
+        "idProveedor": "CDEF",
+        "precio": 25
+      },
+      {
+        "CodigoPieza": 9,
+        "idProveedor": "GHIJ",
+        "precio": 18
+      },
+      {
+        "CodigoPieza": 10,
+        "idProveedor": "KLMN",
+        "precio": 40
+      }
+    ]
   }
-  
+}
